@@ -13,15 +13,23 @@ font-family: 'Courier New', Courier, monospace;
   background-color: #1b1b1b;
 }
 main {
-margin-top: 250px ;
+margin-top: 25px ;
 }
 /*Desktop View*/
 @media (min-width: 768px){
   main {
     margin-top: 0px ;
-    margin-left: 243px;
+    margin-left: 248px;
     padding: 10px;
   }
+}
+#navBarHeader{
+    background-image: linear-gradient(to left,rgb(216, 29, 216),rgb(98, 16, 250));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 header{
     color: white;
@@ -49,7 +57,7 @@ a:visited{
     color:white;
 }
 a:hover {
-    background-image: linear-gradient(to right, #d81dd8,#FFACFC);
+    background-image: linear-gradient(to right,rgb(216, 29, 216),rgb(98, 16, 250));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -60,7 +68,10 @@ nav {
   left: 0;
   height: 250px;
   width: 100%;
-  background-color: #7122FA;
+  background-color: #1b1b1b;
+  border-style: solid;
+  color: #d81dd8;
+  text-align: center;
 }
 /*Desktop View*/
 @media (min-width: 768px){
@@ -70,14 +81,26 @@ nav {
   left: 0;
   width: 250px;
   height: 100%;
-  background-color: #7122FA;
+  background-color: #1b1b1b;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   }
 }
+
 nav ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+ 
+   
   }
+
+
+
+
+
+
 code {
     color: white;
 }
@@ -87,5 +110,19 @@ code:hover {
     -webkit-text-fill-color: transparent;
 }
 li{
+  color: #7122FA;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+@media (min-width: 768px){
+  li{
+    font-size: 20px;
     color: #7122FA;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+.nav-link{
+
+
 }

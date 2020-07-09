@@ -18,10 +18,7 @@
             <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
             <li><a href="#Variables" class="nav-link">Variables</a></li>
             <li><a href="#Data_Types" class="nav-link">Data Types</a></li>
-            <li><a href="#Printf" class="nav-link">Printf</a></li>
-            <li><a href="#Working_With_Numbers" class="nav-link">Working With Numbers</a></li>
-            <li><a href="#Comments" class="nav-link">Comments</a></li>
-            <li><a href="#Constants" class="nav-link">Constants</a></li>
+            <li><a href="#Comments_Numbers_&_Const" class="nav-link">Comments Numbers & Const</a></li>
             <li><a href="#Getting_User_Input" class="nav-link">Getting User Input</a></li>
             <li><a href="#Arrays" class="nav-link">Arrays</a></li>
             <li><a href="#Functions" class="nav-link">Functions</a></li>
@@ -44,50 +41,188 @@
     <main id="main-doc">
         <section class="main-section" id="Introduction">
             <header>Introduction</header>
-            <p>
-                <li class="code_description">C is one of the oldest programing languages around.</li>
-                <li class="code_description">A lot of Modern Programming languages are actually based off of C.</li>
-                <li class="code_description">This Document will give you the basics of C programming so you can write
-                    your own C programns.</li>
-                <li class="code_description">You will need a complier for you C programs to work, I prefer using Code
-                    blocks as it is very user friendly.</li>
-                <li class="code_description">You can download it
-                    <a href="http://www.codeblocks.org/" alt="link to code blocks website">here</a>.</li>
+            <ul class="nope">
+                <span class="nope">
+
+                    <li><span class="notes">Firstly I wan to say thank you to Mike Dane at <a
+                                href="https://www.mikedane.com/">Girraffe
+                                Academy</a> for
+                            being so good at teaching programming.
+                        </span>
+                    <li><span class="notes">You gave me the drive to purse web development as a</span></li>
+                    <li><span class="notes">career, and explained things in a way that never clicked in school. Thanks
+                            Dude!</span></li>
+                    </li>
+                    <li><span class="notes">These are the notes I made while running through his tutorials a while
+                            back.</span></li>
+
+                </span>
+                <li>This Document will give you the basics of C programming so you can write your own C programns.
+                </li>
+                <li>A lot of Modern Programming languages are actually based off of C.</li>
+                <li>C is one of the oldest programing languages around.</li>
+                <li>C Programming can be used to do all sorts of things, graphics, game
+                    programming, gpu programming, computer networking, and many more.</li>
+                <li> You will need a complier for you C programs to work, I prefer using Code.</li>
+                <li>blocks as it is very user friendly.</li>
+                </span>
+            </ul>
+            <p class="code_description">You can download it
+                <a href="http://www.codeblocks.org/">here</a>.
             </p>
         </section>
         <section class="main-section" id="Hello_World">
             <header>Hello World</header>
-            <p></p>
-            <code></code>
+            <p>Firstly load up you text editor/compiler and lets make sure everything is working by typing in and
+                compiling the code below.If everything is working fine you should be able to print out "Hello world!" to
+                the terminal.
+            </p>
+            <!--begginning of hello world test-->
+            <code>
+        int main(){printf("Hello world!\n");return 0;}
+            </code>
+            <!--end of hello world test-->
         </section>
         <section class="main-section" id="Variables">
             <header>Variables</header>
-            <p></p>
-            <code></code>
+            <p>Here we use the printf function just to print our story, just like in the above example.</p>
+            <p>This will print to the Terminal <span class="termText">There once was a young camper that was selft
+                    taught!</span> However the \n will
+                bring you to the next line and is not printed.
+            </p>
+            <!-- begginning of variables example one-->
+            <code>
+        int main(){ 
+        printf("There once was a young camper that was selft taught!\n")
+        return 0;}
+            </code>
+            <!--end of variables example one-->
+            <p>In the below code we see <span class="termText"> 3 strings</span> contained in the "" quotation
+                marks,</span>
+                you also see <span class="termText">\n </span>which brings you
+                to the next line, a semi colon <span class="termText">; at the end of each printf();</span>, and <span
+                    class="termText">return</span> which allows you to end and return the code.
+            </p>
+            <!-- begginning of variables example two-->
+            <code>
+        int main(){ 
+        printf("Hello world!\n");
+        printf("There once was a young camper that was selft taught!\n");
+        printf("The camper's name was Jim.\n");
+        printf("He was 27 years old and went to school for Geology.");
+        return 0;
+                }
+            </code>
+            <!--end of variables example two-->
+            <p>Below <span class="termText">char</span> and <span class="termText">int</span> are used, char deals
+                with <span class="termText">letters</span>, where as int is for dealing with <span
+                    class="termText">numbers</span>.
+            <p>
+                Both char and int are used to create and define
+                the variable names,<span class="termText">%s</span> is used as a place holder for
+                <span class="termText">characterName</span>, and <span class="termText">%d</span> is used as a
+                placeholder for
+                <span class="termText">characterAge</span>.
+            </p>
+            <p>
+                This way all I have to do is change camper or 27 to something else and it will update when it prints
+                where %s and %d. Data Types will be covered more in the next section.
+            </p>
+            <code>
+        int main(){
+        char characterName[] = 'camper';
+        int characterAge = 27;
+        printf("There once was a man named %s\n", characterName);
+        printf("he was %d years old.\n", characterAge);
+        return 0;
+                }
+            </code>
         </section>
         <section class="main-section" id="Data_Types">
             <header>Data Types</header>
-            <p></p>
-            <code></code>
+            <p>
+                <span class="termText">int(integer):</span> is for representing WHOLE numbers, no decimals. Here a
+                variable is created age = to 40
+            </p>
+            <p>
+                <span class="termText">double:</span> is used for representing DECIMAL numbers, here the variable gpa =
+                to 3.6 is created
+            </p>
+            <p>
+                <span class="termText">char:</span> is used for representing CHARACTERS, SINGLE characters are stored in
+                single quotes ''
+            </p>
+            <p>
+                <span class="termText">char name[] = "":</span> how you can use char and double quotes to combine more
+                than one character, or
+                essentially STRING characters together to make an ARRAY
+            </p>
+            <code>
+        int main()
+        {
+        int age = 27;
+        double gpa = 3.6;
+        char grade = 'A';
+        char phrase[] = "freecodecamp"; 
+        return 0;
+        }
+                </code>
+            <p>
+                Format specifier basics: tells the printf you want to print data that is not a character
+                %d means you want to print a number
+                Here text and a numbers printed together various ways, one of which they are printed by printed by
+                calling them from defined variables above.
+            </p>
+            <code>
+        int main()
+        {
+        printf("%d\n", 500);
+        printf("My favorite %s is %d", "least favorite number", 200);
+        printf("My favorite number is %d\n", 500);
+        printf("%d\n", age);
+        printf("My next favorite %s is %f", "number", 500.98754);
+        printf("This is %s. My age is %d. my GPA is %f. My grade is an %c \n", phrase, age, gpa, grade)
+        return 0;
+        }
+            </code>
+            <p>Here is a list of format specifiers</p>
+            <code>
+        %c	a single character
+        %s	a string
+        %hi	short (signed)
+        %hu	short (unsigned)
+        %Lf	long double
+        %lf     double
+        %n	prints nothing
+        %d	a decimal integer (assumes base 10)
+        %i	a decimal integer (detects the base automatically)
+        %o	an octal (base 8) integer
+        %x	a hexadecimal (base 16) integer
+        %p	an address (or pointer)
+        %f	a floating point number for floats
+        %u	int unsigned decimal
+        %e	a floating point number in scientific notation
+        %E	a floating point number in scientific notation
+        %%	the % symbol
+            </code>
         </section>
-        <section class="main-section" id="Printf">
-            <header>Printf</header>
+        <section class="main-section" id="Comments_Numbers_&_Const">
+            <header>Comments Numbers & Const</header>
             <p></p>
-            <code></code>
-        </section>
-        <section class="main-section" id="Working_With_Numbers">
-            <header>Working With Numbers</header>
-            <p></p>
-            <code></code>
-        </section>
-        <section class="main-section" id="Comments">
-            <header>Comments</header>
-            <p></p>
-        </section>
-        <section class="main-section" id="Constants">
-            <header>Constants</header>
-            <p></p>
-            <code></code>
+            <code>
+        int main()
+        {
+        <span class="comment">/*This is a way to comment stuff out in C printf("%f\n", 8.9)*/</span>
+        <span class="comment">//This is also one way to comment out stuff in Cprintf("%f\n", 5.0 + 4.5);</span>
+        printf("%f\n", 5 + 3.5);
+        printf("%f\n", 5 / 4.0);
+        printf("%f\n", pow(4, 3) ); <span class="comment">/*pow: basically takes the first number and raises it to the second number. ex. 4^3*/</span>
+        printf("%f\n", sqrt(36) ); <span class="comment">/*sqrt: gives you the square root of a number*/</span>
+        printf("%f\n", ceil(24.356) );  <span class="comment">/*basically round the number UP*/</span>
+        printf("%f\n", floor(26.356) );  <span class="comment">/*basically round the number DOWN*/</span>
+        return 0;
+        }
+            </code>
         </section>
         <section class="main-section" id="Getting_User_Input">
             <header>Getting User Input</header>
@@ -101,7 +236,7 @@
         </section>
         <section class="main-section" id="Functions">
             <header>Functions</header>
-            <p></p>
+            <p>Functions: are blocks of code we can call to modify values</p>
             <code></code>
         </section>
         <section class="main-section" id="Return_Statements">

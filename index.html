@@ -12,7 +12,7 @@
 
 <body>
     <nav id="navbar">
-        <header id="navBarHeader">Programming in C</header>
+        <header id="navBarHeader">Programming in <span class="C">C</span></header>
         <ul>
             <li><a href="#Introduction" class="nav-link">Introduction</a></li>
             <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
@@ -54,9 +54,9 @@
                 <li>A lot of Modern Programming languages are actually based off of C.</li>
                 <li>C is one of the oldest programing languages around.</li>
                 <li>C Programming can be used to do all sorts of things, graphics, game
-                    programming, gpu programming, computer networking, and many more.</li>
-                <li> You will need a complier for you C programs to work, I prefer using Code blocks as it is very user
-                    friendly.</li>
+                    programming, graphics, computer networking, and many more.</li>
+                <li> You will need to compile your C programs for them to work properly. I prefer using the Codeblocks
+                    IDE as that is what I learned on, it is very user friendly.</li>
                 </span>
             </ul>
             <p class="code_description">You can download it
@@ -70,7 +70,10 @@
                 the terminal.
             </p>
             <code>
-        int main(){printf("Hello world!\n");return 0;}
+ int main() {
+     printf("Hello world!\n");
+     return 0;
+   }
             </code>
         </section>
         <section class="main-section" id="Variables">
@@ -81,9 +84,10 @@
                 bring you to the next line and is not printed.
             </p>
             <code>
-        int main(){ 
-        printf("There once was a young camper that was selft taught!\n")
-        return 0;}
+ int main(){ 
+     printf("There once was a young camper that was selft taught!\n")
+     return 0;
+   }
             </code>
             <p>In the below code we see <span class="termText"> 3 strings</span> contained in the "" quotation
                 marks,</span>
@@ -92,13 +96,13 @@
                     class="termText">return</span> which allows you to end and return the code.
             </p>
             <code>
-        int main(){ 
-        printf("Hello world!\n");
-        printf("There once was a young camper that was selft taught!\n");
-        printf("The camper's name was Jim.\n");
-        printf("He was 27 years old and went to school for Geology.");
-        return 0;
-                }
+ int main() { 
+     printf("Hello world!\n");
+     printf("There once was a young camper that was selft taught!\n");
+     printf("The camper's name was Jim.\n");
+     printf("He was 27 years old and went to school for Geology.");
+     return 0;
+   }
             </code>
             <p>Below <span class="termText">char</span> and <span class="termText">int</span> are used, char deals
                 with <span class="termText">letters</span>, where as int is for dealing with <span
@@ -115,20 +119,20 @@
                 where %s and %d. Data Types will be covered more in the next section.
             </p>
             <code>
-        int main(){
-        char characterName[] = 'camper';
-        int characterAge = 27;
-        printf("There once was a man named %s\n", characterName);
-        printf("he was %d years old.\n", characterAge);
-        return 0;
-                }
+ int main(){
+     char characterName[] = 'camper';
+     int characterAge = 27;
+     printf("There once was a man named %s\n", characterName);
+     printf("he was %d years old.\n", characterAge);
+     return 0;
+   }
             </code>
         </section>
         <section class="main-section" id="Data_Types">
             <header>Data Types</header>
             <p>
                 <span class="termText">int(integer):</span> is for representing WHOLE numbers, no decimals. Here a
-                variable is created age = to 40
+                variable is created age = to 27
             </p>
             <p>
                 <span class="termText">double:</span> is used for representing DECIMAL numbers, here the variable gpa =
@@ -144,14 +148,13 @@
                 essentially STRING characters together to make an ARRAY
             </p>
             <code>
-        int main()
-        {
-        int age = 27;
-        double gpa = 3.6;
-        char grade = 'A';
-        char phrase[] = "freecodecamp"; 
-        return 0;
-        }
+ int main(){
+     int age = 27;
+     double gpa = 3.6;
+     char grade = 'A';
+     char phrase[] = "freecodecamp"; 
+     return 0;
+   }
                 </code>
             <p>
                 Format specifier basics: tells the printf you want to print data that is not a character
@@ -160,16 +163,15 @@
                 calling them from defined variables above.
             </p>
             <code>
-        int main()
-        {
-        printf("%d\n", 500);
-        printf("My favorite %s is %d", "least favorite number", 200);
-        printf("My favorite number is %d\n", 500);
-        printf("%d\n", age);
-        printf("My next favorite %s is %f", "number", 500.98754);
-        printf("This is %s. My age is %d. my GPA is %f. My grade is an %c \n", phrase, age, gpa, grade)
-        return 0;
-        }
+int main(){
+     printf("%d\n", 500);
+     printf("My favorite %s is %d", "least favorite number", 200);
+     printf("My favorite number is %d\n", 500);
+     printf("%d\n", age);
+     printf("My next favorite %s is %f", "number", 500.98754);
+     printf("This is %s. My age is %d. my GPA is %f. My grade is an %c \n", phrase, age, gpa, grade)
+     return 0;
+   }
             </code>
             <p>Here is a list of format specifiers</p>
             <code>
@@ -195,18 +197,27 @@
         <section class="main-section" id="Comments_Numbers_&_Const">
             <header>Comments Numbers & Const</header>
             <code>
-        int main()
-        {
-        <span class="comment">/*This is a way to comment stuff out in C printf("%f\n", 8.9)*/</span>
-        <span class="comment">//This is also one way to comment out stuff in Cprintf("%f\n", 5.0 + 4.5);</span>
-        printf("%f\n", 5 + 3.5);
-        printf("%f\n", 5 / 4.0);
-        printf("%f\n", pow(4, 3) ); <span class="comment">/*pow: basically takes the first number and raises it to the second number. ex. 4^3*/</span>
-        printf("%f\n", sqrt(36) ); <span class="comment">/*sqrt: gives you the square root of a number*/</span>
-        printf("%f\n", ceil(24.356) );  <span class="comment">/*basically round the number UP*/</span>
-        printf("%f\n", floor(26.356) );  <span class="comment">/*basically round the number DOWN*/</span>
-        return 0;
-        }
+                <span class="comment">
+    //COMMENTS
+                /*
+                This is a multi-line
+                comment
+                */
+
+                // This is an inline comment
+                </span>
+
+ int main(){
+        <span class="comment">//printf("%f\n", 8.9)</span>
+        <span class="comment">//printf("%f\n", 5.0 + 4.5);</span>
+     printf("%f\n", 5 + 3.5);
+     printf("%f\n", 5 / 4.0);
+     printf("%f\n", pow(4, 3) ); <span class="comment">/*pow: basically takes the first number and raises it to the second number. ex. 4^3*/</span>
+     printf("%f\n", sqrt(36) ); <span class="comment">/*sqrt: gives you the square root of a number*/</span>
+     printf("%f\n", ceil(24.356) );  <span class="comment">/*basically round the number UP*/</span>
+     printf("%f\n", floor(26.356) );  <span class="comment">/*basically round the number DOWN*/</span>
+     return 0;
+    }
             </code>
         </section>
         <section class="main-section" id="Getting_User_Input">
@@ -222,27 +233,26 @@
                 You could also use multiple %s</p>
             <p>See Below For Example Uses.</p>
             <code>
-        int main()
-        {
-        char grade;
-        char name[20];
-        int age;
-        double gpa;
+ int main(){
+     char grade;
+     char name[20];
+     int age;
+     double gpa;
         printf("Enter your grade: ");
-        scanf("%c", &grade);
+            scanf("%c", &grade);
         printf("Your grade is %c\n", grade);
         printf("Enter your Name: ");
-        scanf("%s", &name);
+           scanf("%s", &name);
         printf("Your name is %s\n", name);
         printf("Enter your age:");
-        scanf("%d", &age);
+           scanf("%d", &age);
         printf("You are %d years old.\n", age);
         printf("Enter your gpa:");
-        scanf("%lf", &gpa);
+           scanf("%lf", &gpa);
         printf("Your gpa is %f", gpa);
         printf("\n");
-        return 0;
-        }
+     return 0;
+    }
                </code>
         </section>
         <section class="main-section" id="Arrays">
@@ -250,27 +260,27 @@
             <p>An <span class="termText">Array</span> is essentially a data structure where we store a bunch of
                 different data values
             </p>
-            <p><span class="termText">Array: holds many/multiple values(Storage bin)[] = {this is where your data
-                    goes};</span>
+            <p><span class="termText">Array:</span> holds many/multiple values(Storage bin)[] = {this is where your data
+                goes};
             </p>
             <p><span class="termText">Variable:</span> holds a single values(container in the storage bin) */</p>
             <code>
-        int main()
-        {
-        int placeHolder[10];
+int main(){
+     int placeHolder[10];
         <span class="comment">/*now this array is ready to be used but since I don't know what I want to put in it yet I can tell C that I want this array to hold 10 elements*/</span>
         <span class="comment">/*Could also go ahead and assign the values that I do know I want to use with variables*/</span>
-        placeHolder[1] = 80;
-        printf("%d\n", placeHolder[1]);
+     placeHolder[1] = 80;
+     printf("%d\n", placeHolder[1]);
         int luckyNumbers[] ={4, 8, 15, 16, 23, 42}; <span class="comment">/*4 is the first element in the array, the commas separate the elements*/</span>
-        <span class="comment">/*{0  1  2   3   4   5} In C we start indexs in an Array at 0*/</span>
+         <span class="comment">/*{0  1  2   3   4   5} In C we start indexs in an Array at 0*/</span>
         luckyNumbers [0] =200;
         <span class="comment">/*can also modify numbers in the array if you decide you want to change them*/</span>
-            <span class="comment">/*the [] inside choose which number you want call to a certain index in the array */</span>
-        printf("%d\n", luckyNumbers[2] );
-        printf("%d\n", luckyNumbers[0] );
-        return 0;
-        }</code>
+        <span class="comment">/*the [] inside choose which number you want call to a certain index in the array */</span>
+     printf("%d\n", luckyNumbers[2] );
+     printf("%d\n", luckyNumbers[0] );
+     return 0;
+    }
+    </code>
         </section>
         <section class="main-section" id="Functions">
             <header>Functions</header>
@@ -284,21 +294,20 @@
             <p>You can also call it as much as you want and just change the string to get different resutls "scripting"
             </p>
             <code>
-        int main()
-        {
-        printf("Top\n");
-        printf("\n");
+int main(){
+     printf("Top\n");
+     printf("\n");
         sayHi("Cole", 27);
-        printf("\n");    
-        sayHi("Madison", 24);
-        printf("\n");
+     printf("\n");    
+         sayHi("Madison", 24);
+     printf("\n");
         sayHi("Boba", 6);
-        printf("\n");
+     printf("\n");
         sayHi("Nico", 2);
-        printf("\n");
-        printf("Bottom\n");
-        return 0;
-        }
+     printf("\n");
+     printf("Bottom\n");
+     return 0;
+    }
             </code>
         </section>
         <section class="main-section" id="Return_Statements">
@@ -321,15 +330,15 @@
                 However you can prototype it as seen below and put your function below, gotta have that ;
             </p>
             <code>
-        double cube(double num);
-        int main(){
-        printf("Answer: %f", cube(3.0));<span class="comment">//%f is for a double</span>
-        return 0;
-        }
-        double cube(double num){ <span class="comment">//This means we are using a number(and we are gonna do something to this nubmer</span>
-        return num * num * num;<span class="comment">//this return breaks us out of the function and returns back to the caller the value of cube</span>
-        printf("this wont work here cause its after the return");<span class="comment">//Can't Actually run anything else for this function if you type it after the return</span>
-        }
+double cube(double num);
+int main(){
+     printf("Answer: %f", cube(3.0));<span class="comment">//%f is for a double</span>
+     return 0;
+    }
+double cube(double num){ <span class="comment">//This means we are using a number(and we are gonna do something to this nubmer</span>
+     return num * num * num;<span class="comment">//this return breaks us out of the function and returns back to the caller the value of cube</span>
+     printf("this wont work here cause its after the return");<span class="comment">//Can't Actually run anything else for this function if you type it after the return</span>
+    }
             </code>
         </section>
         <section class="main-section" id="If_Statements">
@@ -340,48 +349,47 @@
                 For the if statement if (needs to be specified as True or False).
             </p>
             <code>
-        <span class="comment">//-------------------------------------Basic if else Statement--------------------------------------</span>
-        int max1(int nuM1, int nuM2) //here you are saying you want to return and int as max between two integers(num1 and num2)
-        {
-        int result;<span class="comment">//Here you are creating a variable, an integer called "results"</span>
-        if(nuM1 > nuM2){ <span class="comment">//If-Specify a condition(num1 > num2) is True we will execute the code on below, if false it will execute the Else Statements Code</span>
-        result = nuM1;
-        } else { <span class="comment">//if the if statement above's condition is False it checks the results here with the Else Statement here</span>
-        result = nuM2;
-        return result; <span class="comment">//This takes us out of the else statement and returns the resutls</span> 
+     <span class="comment">//-------------------------------------Basic if else Statement--------------------------------------</span>
+     int max1(int nuM1, int nuM2){<span class="comment">//here you are saying you want to return and int as max between two integers(num1 and num2)</span>
+     int result;<span class="comment">//Here you are creating a variable, an integer called "results"</span>
+        if(nuM1 > nuM2){<span class="comment">//If-Specify a condition(num1 > num2) is True we will execute the code on below, if false it will execute the Else Statements Code</span>
+            result = nuM1;
         }
+        else{<span class="comment">//if the if statement above's condition is False it checks the results here with the Else Statement here</span>
+            result = nuM2;
+            return result;         <span class="comment">//This takes us out of the else statement and returns the resutls</span> 
         }
-        <span class="comment">//-----------------------------------More complex if else and else if statement and(&&)/or(||) logical opperators------------------------------</span>
-        int max2(int num1, int num2 , int num3)
-        {
+     }
+     <span class="comment">//-----------------------------------More complex if else and else if statement and(&&)/or(||) logical opperators------------------------------</span>
+    int max2(int num1, int num2 , int num3){
         int results;
-        <span class="comment">//&& is a logical operator for and</span>
+            <span class="comment">//&& is a logical operator for and</span>
         if(num1 >= num2 && num1 >=num3){
-        results = num1;//if the above is true then num1 is the answer
-        <span class="comment">//else if: is saying if the above if is false, lets come down here and check another condition</span>
-        } else if(num2 >= num1 && num2 >=num3)
-        results = num2;//if the above if statement was false but the above else if is true then num2 is the answer
-        else{
-        results = num3; //if neither of the above if or if else is true than num3 is the answer
+            results = num1;//if the above is true then num1 is the answer
+            <span class="comment">//else if: is saying if the above if is false, lets come down here and check another condition</span>
+            } 
+            else if(num2 >= num1 && num2 >=num3)
+                results = num2;//if the above if statement was false but the above else if is true then num2 is the answer
+            else{
+                results = num3; //if neither of the above if or if else is true than num3 is the answer
+                }
+            return results;
         }
-        return results;
-        }
-        int main()
-        {
+    int main(){
         printf("%d\n", max1(4, 10 ));//the program int max or max is checking what you define here
         printf("\n");
         printf("%d\n", max2(30, 10, 40 ));
         <span class="comment"></span>//|| is the logical operator for or, if it were &&(and) both of the conditions would have to be true to execute the code, with ||(or) only one has to be true to execute the code
-        if(3 < 2 || 2 > 5)
-        printf("True");
-        else{
-        printf("False");
-        }
-        return 0;
-        }
-        <span class="comment"> /* == also checks for equality does 3==3, could also use >=, <=, >, <,
-        or !(not equal or the negation opperator when placed here if(!(3 < 2) ), this would still print True*/</span>
-            </code>
+            if(3 < 2 || 2 > 5)
+                printf("True");
+                    else{
+                printf("False");
+            }
+                return 0;
+    }
+    <span class="comment"> /* == also checks for equality does 3==3, could also use >=, <=, >, <,
+    or !(not equal or the negation opperator when placed here if(!(3 < 2) ), this would still print True*/</span>
+         </code>
         </section>
         <section class="main-section" id="Switch_Statements">
             <header>Switch Statements</header>
@@ -391,30 +399,29 @@
                 says ok break out and check the next one
                 default is used at the end like an else in case some accidentally enters the wrong thing</p>
             <code>
-        int main()
-        {
-        char grade = 'B';
-        switch(grade){
-        case 'A':
+int main(){
+     char grade = 'B';
+     switch(grade){
+     case 'A':
         printf("You did great!");
-        break;
-        case 'B':
+     break;
+     case 'B':
         printf("You did alright!");
-        break;
-        case 'C':
+     break;
+     case 'C':
         printf("You did ok!");
-        break;
-        case 'D':
+     break;
+     case 'D':
         printf("You need improvement!");
-        break;
-        case 'F':
+     break;
+     case 'F':
         printf("You Failed!");
-        break;
-        default :
+     break;
+     default :
         printf("Invalid Grade");
-        }
-        return 0;
-        }
+     }
+     return 0;
+    }
             </code>
         </section>
         <section class="main-section" id="Structs">
@@ -424,42 +431,41 @@
                 could
                 store a int, char, and double all in the same place
                 with structs you can model real world entities, basically model something in the real world inside a
-                program
+                program0
                 Here I use a struct to represent a student inside a program</p>
             <code>
-        struct Student{
-        char name[50];
-        char major[50];
-        int age;
-        double gpa;
-        char interests[50]; 
-        };
-        int main()
-        {
-        <span class="comment">//basically made a container to store a student "student1"</span>
-        struct Student student1;
+struct Student{
+     char name[50];
+     char major[50];
+     int age;
+     double gpa;
+     char interests[50]; 
+    };
+int main(){
+     <span class="comment">//basically made a container to store a student "student1"</span>
+     struct Student student1;
         student1.age = 27;
         student1.gpa = 2.8;
-        strcpy(student1.name, "Cole"); <span class="comment">//string is an array of characters so we cant give it an actual values, so we have to use the strcpy function</span>
-        strcpy(student1.interests, "Coding");
-        strcpy(student1.major, "Geology");
+     strcpy(student1.name, "Cole"); <span class="comment">//string is an array of characters so we cant give it an actual values, so we have to use the strcpy function</span>
+     strcpy(student1.interests, "Coding");
+     strcpy(student1.major, "Geology");
         printf("%f\n", student1.gpa);
         printf("%s\n", student1.name);
         printf("%s\n", student1.interests);
         printf("%s\n", student1.major);
         printf("\n");
-        struct Student student2;
+     struct Student student2;
         student2.age = 24;
         student2.gpa = 3.8;
-        strcpy(student2.name, "Madison");
-        strcpy(student2.major, "Biology");
-        strcpy(student2.interests, "Interior Design");
+     strcpy(student2.name, "Madison");
+     strcpy(student2.major, "Biology");
+     strcpy(student2.interests, "Interior Design");
         printf("%f\n", student2.gpa);
         printf("%s\n", student2.name);
         printf("%s\n", student2.interests);
         printf("%s\n", student2.major);
-        return 0;
-        }
+     return 0;
+    }
             </code>
         </section>
         <section class="main-section" id="While_Loops">
@@ -469,18 +475,18 @@
                 certain block of code until that condition is false
             </p>
             <code>
-        int main(){
-        int index = 6;
+int main(){
+     int index = 6;
         do{
-        printf("%d\n", index);
-        index++;
-        }while(index <= 5);
-        <span class="comment">/*what is in the () is the condition whats in {} is what is getting looked through to check the () conditon
-        as long as whats in the () is is true the while loop will go through the code
-        after it reaches greater than or equal to 5 it ends the loop*/
-        </span>
-        return 0;
-        }
+            printf("%d\n", index);
+            index++;
+        }   while(index <= 5);
+            <span class="comment">/*what is in the () is the condition whats in {} is what is getting looked through to check the () conditon
+            as long as whats in the () is is true the while loop will go through the code
+            after it reaches greater than or equal to 5 it ends the loop*/
+            </span>
+     return 0;
+    }
             </code>
         </section>
         <section class="main-section" id="For_Loops">
@@ -490,24 +496,23 @@
                 ForLoop condenses all the info in to one single loop, like putting multiple loops in one Loop container
             </p>
             <code>
-        int main(){
-        <span class="comment">/*int i =1;
-        while(i <=5){
-        printf("%d\n", i);
-        i++;
-        }*/
-        </span>
-        <span class="comment">/*This shows the difference between while loops(above) vs for loops(below) and how a for loop is just a condensed while loop(better option possibly)*/</span>
-        int luckyNumbers[] = {4, 8, 15, 16, 23, 42};
-        <span class="comment">/*array indexes start at 0*/</span>
+int main(){
+            <span class="comment">/*int i =1;
+            while(i <=5){
+                printf("%d\n", i);
+                i++;
+             }*/</span>
+            <span class="comment">/*This shows the difference between while loops(above) vs for loops(below) and how a for loop is just a condensed while loop(better option possibly)*/</span>
+            int luckyNumbers[] = {4, 8, 15, 16, 23, 42};
+            <span class="comment">/*array indexes start at 0*/</span>
         int i;
-        <span class="comment">/*here you can see the while loop structure condensed into a for loop on line 23*/</span>
+            <span class="comment">/*here you can see the while loop structure condensed into a for loop on line 23*/</span>
         for(i = 0; i< 6; i*3){ <span class="comment">/*array indexes start at 0(4) so we start at 0 and go to till less than 6 since there are 5(ending at 42) elements in this array*/</span>
-        printf("%d\n", luckyNumbers[i]);
+            printf("%d\n", luckyNumbers[i]);
         }
-        <span class="comment">/*for loops are vary handing, anything you can do with a while loop, you can do with a for loop */</span>
+            <span class="comment">/*for loops are vary handing, anything you can do with a while loop, you can do with a for loop */</span>
         return 0;
-        }
+       }
             </code>
         </section>
         <section class="main-section" id="2D_Arrays_&_Nested_Loops">
@@ -516,28 +521,28 @@
                 nested loops: loops inside of a loop
                 These concepts can also apply to 3D Arrays
             </p>
-            <code>int main()
-        {
-        <span class="comment">/*[3 elements in nums array][& 2 elements within each array thats in nums array] is for the 2 elements in the array*/</span>
+            <code>
+int main(){
+            <span class="comment">/*[3 elements in nums array][& 2 elements within each array thats in nums array] is for the 2 elements in the array*/</span>
         int nums[3][2] = {
-        <span class="comment">/*[0][0,1]*/{1, 2},/*1st element in nums array, it has 2 elements within it.
-        [1][0,1]*/{3, 4},/*2nd element in nums array, it has 2 elements within it.
-        [2][0,1]*/{5, 6},/*3rd element in nums array, it has 2 elements within it.*/</span>
+            <span class="comment">/*[0][0,1]*/{1, 2},/*1st element in nums array, it has 2 elements within it.
+            [1][0,1]*/{3, 4},/*2nd element in nums array, it has 2 elements within it.
+            [2][0,1]*/{5, 6},/*3rd element in nums array, it has 2 elements within it.*/</span>
         };
-        <span class="comment">/*  printf("%d\n", nums[0][0]);
-        printf("%d\n", nums[1][0]);
-        printf("%d\n", nums[2][1]); */</span>
-        <span class="comment">
-        /*-------------------------here we do the same as above but with a nested for loop--------------------------*/</span>
+            <span class="comment">/*  printf("%d\n", nums[0][0]);
+            printf("%d\n", nums[1][0]);
+            printf("%d\n", nums[2][1]); */</span>
+            <span class="comment">
+            /*-------------------------here we do the same as above but with a nested for loop--------------------------*/</span>
         int i, j;       
-        for(i = 0; i < 3; i++){          
-        for (j = 0; j < 2; j++){
-        printf("%d,", nums[i][j]);
-        }
-        printf("\n");
+            for(i = 0; i < 3; i++){          
+            for (j = 0; j < 2; j++){
+                printf("%d,", nums[i][j]);
+            }
+                printf("\n");
         }
         return 0;
-        }
+       }
             </code>
         </section>
     </main>

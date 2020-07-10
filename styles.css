@@ -2,7 +2,6 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
 }
 body {
   margin: 0px;
@@ -11,7 +10,7 @@ body {
   background-color: #1b1b1b;
 }
 main {
-margin-top: 254px ;
+margin-top: relative;
 }
 /*Desktop View*/
 @media (min-width: 768px){
@@ -21,17 +20,11 @@ margin-top: 254px ;
     padding: 10px;
   }
 }
-/*Mobile View*/
-@media (max-height: 1024px){
-main{
-  margin-top: 254px ;
-  }
-}
 #navBarHeader{
     background-image: linear-gradient(to left,rgb(216, 29, 216),rgb(98, 16, 250));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 32px;
+    font-size: 35px;
     text-transform: uppercase;
     text-decoration: underline;
 }
@@ -41,11 +34,13 @@ header{
     text-transform: uppercase;
     text-decoration: underline;
     padding-top: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 a {
   position: relative;
   text-decoration: underline;
   border-bottom: thick;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   &::before {
     content: "";
@@ -56,15 +51,18 @@ a {
     left: 0px;
   }
 }
+/*DesktopView */
+@media(min-width:768px){
+a:link{
+    color:#FFACFC;
+    font-size: 25;
+  }
+}
 /*Mobile View*/
+@media(max-width:767px){
 a:link{
   color:#FFACFC;
-  font-size: 15px;
-}
-/*Desktop View*/
-@media (min-width: 768px){
-  a:link{
-    color:#FFACFC;
+  font-size:14px ;
   }
 }
 a:visited{
@@ -75,74 +73,26 @@ a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-/*Mobile View--GalaxyS9*/
-@media (min-width: 361px){
-  nav {
+/*Mobile View*/
+@media (max-width: 767px){
+nav {
   writing-mode: sideways-lr;
-  position: fixed;
   top: 0;
   left: 0;
   height: 260px;
-  width: 10%;
   background-color: #1b1b1b;
   border-style: solid;
   color: #d81dd8;
   text-align: bottom;
   z-index:99;
-  }
-}
-/*Mobile View--Iphone*/
-@media (max-width: 375px){
-  nav {
-  writing-mode: sideways-lr;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 260px;
-  width: 25.5%;
-  background-color: #1b1b1b;
-  border-style: solid;
-  color: #d81dd8;
-  text-align: bottom;
-  z-index:99;
-  }
-}
-/*Mobile View--IphonePlus*/
-@media (max-width: 414px){
-  nav {
-  writing-mode: sideways-lr;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 260px;
-  width: 28.2%;
-  background-color: #1b1b1b;
-  border-style: solid;
-  color: #d81dd8;
-  text-align: bottom;
-  z-index:99;
-  }
-}
-/*Mobile View Ipad*/
-@media (min-width: 769px){
-  nav {
-  transform: none;
-  writing-mode: horizontal-tb;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  background-color: #1b1b1b;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  display: grid;
+  position: relative;
+  width: 100%;
   }
 }
 /*Desktop View*/
-@media (min-width: 769px){
+@media (min-width: 768px){
   nav {
-  transform: none;
   writing-mode: horizontal-tb;
   position: fixed;
   top: 0;
@@ -150,6 +100,10 @@ a:hover {
   width: 250px;
   height: 100%;
   background-color: #1b1b1b;
+  border-style: solid;
+  color: #d81dd8;
+  text-align: bottom;
+  z-index:99;
   display:flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -162,11 +116,12 @@ nav ul {
   }
   h2{
     display: flex;
+
     color: white;
     text-align: center;
     font-size: 20px;
     text-decoration: underline;
-   
+    font-family: 'Courier New', Courier, monospace;
     
   }
   /*Mobile View*/
@@ -211,6 +166,7 @@ code:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/*Mobile View*/
 li{
   color: #d81dd8;
   margin-top: px;
@@ -231,6 +187,7 @@ h2{
 p {
   color:white;
   text-align: left;
+  font-family: 'Courier New', Courier, monospace;
 }
 .termText{
   color: #d81dd8;
@@ -246,8 +203,4 @@ p {
 }
 .comment {
   color:rgba(150, 147, 147, 0.918);
-}
-.C{
-  font-weight: bold;
-  
 }

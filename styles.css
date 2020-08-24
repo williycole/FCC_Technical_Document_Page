@@ -76,6 +76,7 @@ a:hover {
 /*Mobile View*/
 @media (max-width: 767px){
 nav {
+  z-index: 9999;
   writing-mode: sideways-lr;
   top: 0;
   left: 0;
@@ -84,7 +85,7 @@ nav {
   border-style: solid;
   color: #d81dd8;
   text-align: bottom;
-  z-index:99;
+  
   display: grid;
   position: relative;
   width: 100%;

@@ -1,2 +1,2 @@
 # Technical_Document_Page
-This repository contains all work done for my product landing page project for freecodecamp's Responsive Web Design Certification.
+<-WIP: Redoing in React & Tailwind-> This repository contains all work done for my Technical Document Page project for freecodecamp's Responsive Web Design Certification. 
